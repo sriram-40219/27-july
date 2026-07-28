@@ -1,0 +1,58 @@
+<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Semantic HTML + JS Demo</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    header, footer { background: aqua; padding: 10px; text-align: center; }
+    main { margin: 20px 0; }
+    button { padding: 8px 16px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Page</h1>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a> | 
+    <a href="#about">About</a>
+  </nav>
+
+  <main>
+    <section id="home">
+      <h2>Home Section</h2>
+      <p>This paragraph will be updated by JavaScript.</p>
+      <button onclick="runJS()">Click Me</button>
+    </section>
+
+    <section id="about">
+      <h2>About Section</h2>
+      <div id="output"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>@ 2026 Demo Page</p>
+  </footer>
+
+  <script>
+    console.log("Page loaded successfully");
+
+    function runJS() {
+      document.getElementById("output").innerHTML =
+        "<h3>Hello from innerHTML!</h3>";
+
+      console.log(
+        "Button was clicked at: " + new Date().toLocaleTimeString()
+      );
+
+      document.getElementById("output").innerHTML +=
+        "<p>This line came from JavaScript.</p>";
+    }
+  </script>
+
+</body>
+</html>
