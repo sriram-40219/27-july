@@ -1,58 +1,94 @@
-<html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Semantic HTML + JS Demo</title>
-  <style>
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    header, footer { background: aqua; padding: 10px; text-align: center; }
-    main { margin: 20px 0; }
-    button { padding: 8px 16px; cursor: pointer; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        header, footer {
+            background-color: aqua;
+            padding: 15px;
+            text-align: center;
+        }
+        main {
+            margin: 20px 0;
+        }
+        section {
+            background-color: pink;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: lightgreen;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to My Page</h1>
-  </header>
+    <header>
+        <h1>This is the About Page</h1>
+    </header>
 
-  <nav>
-    <a href="#home">Home</a> | 
-    <a href="#about">About</a>
-  </nav>
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <p>My name is Sriram</p>
+        </section>
+                <section>
+            <h2>my email id</h2>
+            <p>my email id is nsriramgoud746@gmail.com
+        </section>
 
-  <main>
-    <section id="home">
-      <h2>Home Section</h2>
-      <p>This paragraph will be updated by JavaScript.</p>
-      <button onclick="runJS()">Click Me</button>
-    </section>
+        <section>
+            <h2>Courses</h2>
+            <table>
+                <tr>
+                    <th>Course Id</th>
+                    <th>CourseName</th>
+                </tr>
+                <tr>
+                    <td>25SC2008</td>
+                    <td>Full Stack</td>
+                </tr>
+                <tr>
+                    <td>25CS2204</td>
+                    <td>Computer networks and security</td>
+                </tr>
+                <tr>
+                    <td>25EC2206</td>
+                    <td>Embedded system</td>
+                </tr>
+                <tr>
+                    <td>25AD2102</td>
+                    <td>Ai&ML</td>
+                </tr>
+                <tr>
+                    <td>25MT1306</td>
+                    <td>Maths</td>
+                </tr>
+                <tr>
+                    <td>25EC1302</td>
+                    <td>Os</td>
+                </tr>
+            </table>
+        </section>
+    </main>
 
-    <section id="about">
-      <h2>About Section</h2>
-      <div id="output"></div>
-    </section>
-  </main>
-
-  <footer>
-    <p>@ 2026 Demo Page</p>
-  </footer>
-
-  <script>
-    console.log("Page loaded successfully");
-
-    function runJS() {
-      document.getElementById("output").innerHTML =
-        "<h3>Hello from innerHTML!</h3>";
-
-      console.log(
-        "Button was clicked at: " + new Date().toLocaleTimeString()
-      );
-
-      document.getElementById("output").innerHTML +=
-        "<p>This line came from JavaScript.</p>";
-    }
-  </script>
-
+    <footer>
+        <p>© 2026 My Website. All rights reserved.</p>
+    </footer>
 </body>
 </html>
+
